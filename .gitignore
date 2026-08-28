@@ -1,0 +1,13 @@
+# Runtime data volumes - not source code
+grafana-data/
+influxdb-data/
+node-red-data/
+
+# Logs
+*.log
+
+# OS/editor junk
+.DS_Store
+*.swp
+mosquitto/data/
+mosquitto/log/
