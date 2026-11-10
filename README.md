@@ -6,6 +6,7 @@ fault alerting.
 
 ## Architecture
 
+```
 PLC Simulator (Python, Grafcet X0-X4)
         |
         v  MQTT (coficab/surpresseur/...)
@@ -22,6 +23,7 @@ PLC Simulator (Python, Grafcet X0-X4)
         |
         v
       Grafana
+```
 
 ## Components
 
@@ -36,14 +38,14 @@ PLC Simulator (Python, Grafcet X0-X4)
 
 ## MQTT Topics
 
-| Topic                              | Description         |
-|-------------------------------------|----------------------|
-| `coficab/surpresseur/state`         | Grafcet state (X0-X4)|
-| `coficab/surpresseur/outputs/Mt1`   | Motor 1 status       |
-| `coficab/surpresseur/outputs/Mt2`   | Motor 2 status       |
-| `coficab/surpresseur/outputs/fault` | Fault / V_R signal   |
-| `coficab/surpresseur/inputs/P1`     | Pressure sensor 1    |
-| `coficab/surpresseur/inputs/P2`     | Pressure sensor 2    |
+| Topic                               | Description           |
+|-------------------------------------|-----------------------|
+| `coficab/surpresseur/state`         | Grafcet state (X0-X4) |
+| `coficab/surpresseur/outputs/Mt1`   | Motor 1 status        |
+| `coficab/surpresseur/outputs/Mt2`   | Motor 2 status        |
+| `coficab/surpresseur/outputs/fault` | Fault / V_R signal    |
+| `coficab/surpresseur/inputs/P1`     | Pressure sensor 1     |
+| `coficab/surpresseur/inputs/P2`     | Pressure sensor 2     |
 
 ## Dashboards
 
@@ -56,6 +58,13 @@ Historical trend panels:
 - Pressure Trends (P1 & P2) — time series
 - Motor Status (Mt1 & Mt2) — state timeline
 - Fault Events — state timeline
+
+## Screenshots
+
+![Node-RED flow](docs/nodered-flow.png)
+![Node-RED dashboard](docs/nodered-dashboard.png)
+![Grafana dashboard](docs/grafana-dashboard.png)
+![Telegram fault alert](docs/telegram-alerts.png)
 
 ## Alerting
 
